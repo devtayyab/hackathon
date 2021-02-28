@@ -6,6 +6,7 @@ import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 function Student({navigation}) {
 
   const [values, setvalue]= useState([])
+ 
    useEffect(()=>  {
   
     database().ref("companies/").once("value", snapshot => {
@@ -32,9 +33,12 @@ function Student({navigation}) {
       
      
         <Content padder>
+
            <Text style={{fontSize:40,fontFamily:'serif'}}>Companies</Text>
             {values.map((v,i)=>
             <ScrollView key={i}>
+               
+             
           <Card key={i} >
            <CardItem header bordered style={{justifyContent:'space-between'}}>
               <Text>{`Name:     ${v.name}`}</Text>

@@ -58,7 +58,7 @@ function Studentdetail({navigation}) {
               <Text style={{position:'relative'}}>{`Age:${v.age} `}{"\n"}{"\n"}</Text>
               
               <Text>{`${v.date}`}</Text>
-              <Button style={{backgroundColor:'blue'}}><Text>Delete</Text></Button>
+              <Button style={{backgroundColor:'blue'}} ><Text>Delete</Text></Button>
            <Button style={{backgroundColor:'blue'}}><Text>Edit</Text></Button>
             </CardItem>
           
