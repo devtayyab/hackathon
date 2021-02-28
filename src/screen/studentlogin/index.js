@@ -7,6 +7,7 @@ import database from '@react-native-firebase/database';
   function StudentSignup({navigation}) {
  
   const[ name, setname] = useState()
+  const[ marks, setmarks] = useState()
   const[ email, setemail] = useState()
   const[ age, setage] = useState()
   const[ password, setpassword] = useState()
@@ -16,7 +17,7 @@ import database from '@react-native-firebase/database';
      
       console.log("tayyab")
 
-      {email && password && name && age &&location ? 
+      {email && password && name && age &&location && marks ? 
 
   auth()
   .createUserWithEmailAndPassword(email, password)
@@ -30,6 +31,7 @@ console.log('Auto generated key: ', newReference.key);
 
 newReference
   .set({
+    marks: marks,
     name : name,
     email:email,
     age :age,
@@ -94,6 +96,10 @@ newReference
             <Item stackedLabel>
               <Label style={styles.label}>Location</Label>
               <Input placeholder="" value={location} onChangeText={(text)=>setlocation(text)}/>
+            </Item> 
+            <Item stackedLabel>
+              <Label style={styles.label}>Marks</Label>
+              <Input placeholder="" value={marks} onChangeText={(text)=>setmarks(text)}/>
             </Item> 
             <Item stackedLabel>
               <Label style={styles.label}>Class</Label>

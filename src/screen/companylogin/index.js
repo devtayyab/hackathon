@@ -7,6 +7,7 @@ import database from '@react-native-firebase/database';
   function CompanySignup({navigation}) {
  
   const[ name, setname] = useState()
+  const[ job, setjob] = useState()
   const[ email, setemail] = useState()
   const[ password, setpassword] = useState()
   const[ location, setlocation] = useState()
@@ -30,6 +31,7 @@ console.log('Auto generated key: ', newReference.key);
 newReference
   .set({
     name : name,
+    job:job,
     email:email,
     location:location,
     password: password,
@@ -88,6 +90,10 @@ newReference
             <Item stackedLabel>
               <Label style={styles.label}>Location</Label>
               <Input placeholder="" value={location} onChangeText={(text)=>setlocation(text)}/>
+            </Item> 
+            <Item stackedLabel>
+              <Label style={styles.label}>Job</Label>
+              <Input placeholder="" value={job} onChangeText={(text)=>setjob(text)}/>
             </Item> 
             <Item stackedLabel>
               <Label style={styles.label}>Status</Label>

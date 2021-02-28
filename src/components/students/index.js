@@ -59,6 +59,7 @@ function Student({ navigation }) {
               <CardItem header bordered style={{ justifyContent: 'space-between' }}>
                 <Text>{`Name:     ${v.name}`}</Text>
                 <Text>{`${v.location}`}</Text>
+                
               </CardItem>
               <CardItem bordered>
                 <Body>
@@ -68,7 +69,7 @@ function Student({ navigation }) {
                       {"\n"}
                       {`Email:   ${v.email}`}
                       {"\n"}
-
+                      <Text>{`${v.marks}`}</Text>
                     </Text>
                   </View>
                 </Body>

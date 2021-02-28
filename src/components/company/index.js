@@ -52,7 +52,7 @@ function Student({navigation}) {
                   {"\n"}
                   {`Email:   ${v.email}`}
                   {"\n"}
-                
+                  {`job:   ${v.job}`}
                 </Text>
                 </View>
               </Body>

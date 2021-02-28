@@ -6,7 +6,7 @@ const Admin=({navigation})=>{
     return(
         <Container>
 <View>
-    <Text style={styles.heading}>Campus Recuritment System</Text>
+    <Text style={styles.heading}>Campus Recruitment System</Text>
     <View >
     <TouchableOpacity
         style={styles.button}
