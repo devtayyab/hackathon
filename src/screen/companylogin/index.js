@@ -106,7 +106,7 @@ newReference
             </Item> 
            
             <Item style={{justifyContent: 'space-around'}}>
-            <Button style={{backgroundColor:'red'}}  typeof="submit" onPress={()=>Savedata()}><Text>Sign Up</Text></Button>
+            <Button style={{backgroundColor: "#DDDDDD"}}  typeof="submit" onPress={()=>Savedata()}><Text style={{color:'black'}}>Sign Up</Text></Button>
          
             </Item>
            

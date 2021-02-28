@@ -28,31 +28,31 @@ function Companydetail({ navigation }) {
         )
 
     }, [])
-    const dell = async (e)  => {
-         await database()
+    const dell = async (e) => {
+        await database()
             .ref(`/companies/${e}`)
-            .remove().then(()=> alert('deleted'),
-            database().ref("companies/").once("value", snapshot => {
-                let allNotes = [];
-                snapshot.forEach(snap => {
-                    allNotes.push({
-                        name: snap.val(),
-                        _key: snap.key
+            .remove().then(() => alert('deleted'),
+                database().ref("companies/").once("value", snapshot => {
+                    let allNotes = [];
+                    snapshot.forEach(snap => {
+                        allNotes.push({
+                            name: snap.val(),
+                            _key: snap.key
+                        });
+
                     });
-    
-                });
-    
-    
-    
-                var value = allNotes
-                setvalue(value)
-    
-    
-            },
+
+
+
+                    var value = allNotes
+                    setvalue(value)
+
+
+                },
+                )
+
             )
-    
-            )
-           
+
     }
     console.log("outside value", values)
 
@@ -84,7 +84,7 @@ function Companydetail({ navigation }) {
 
                             </CardItem>
                             <CardItem footer bordered style={{ justifyContent: "space-between" }}>
-                                <Button style={{ backgroundColor: 'blue' }} onPress={()=>dell(v._key)}>
+                                <Button style={{ backgroundColor: 'blue' }} onPress={() => dell(v._key)}>
                                     <Text>Delete</Text></Button>
                                 <Button style={{ backgroundColor: 'blue' }}><Text>Edit</Text></Button>
 

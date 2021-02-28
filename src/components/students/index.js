@@ -30,7 +30,7 @@ function Student({ navigation }) {
     },
     )
 
-  })
+  },[text])
   console.log("outside value", values)
 
   return (

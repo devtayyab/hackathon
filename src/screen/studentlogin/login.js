@@ -48,7 +48,7 @@ const Login=()=>{
               <Label>Password</Label>
               <Input placeholder="Enter password" caretHidden onChangeText={(text)=>setpassword(text)} required/>
             </Item>
-               <Button style={{backgroundColor:'red'}} onPress={()=>Login()}><Text>LOg in</Text></Button>
+               <Button style={{backgroundColor: "#DDDDDD"}} onPress={()=>Login()}><Text style={{color:'black'}}>LOg in</Text></Button>
                <Text>If you don't have account press</Text>
             
                <Pressable  onPress={()=>navigation.navigate('Student Signup')}><Text style={{fontFamily:'serif',color:'red'}}>Signup</Text></Pressable>
