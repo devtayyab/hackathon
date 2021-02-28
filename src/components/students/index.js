@@ -69,7 +69,7 @@ function Student({ navigation }) {
                       {"\n"}
                       {`Email:   ${v.email}`}
                       {"\n"}
-                      <Text>{`${v.marks}`}</Text>
+                      <Text>{`Marks: ${v.marks}`}</Text>
                     </Text>
                   </View>
                 </Body>
@@ -78,7 +78,7 @@ function Student({ navigation }) {
 
                 <Text style={{ position: 'relative' }}>{`Age:${v.age} `}{"\n"}{"\n"}</Text>
 
-                <Text>{`${v.date}`}</Text>
+                
               </CardItem>
 
             </Card>

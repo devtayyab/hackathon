@@ -42,7 +42,7 @@ function Student({navigation}) {
           <Card key={i} >
            <CardItem header bordered style={{justifyContent:'space-between'}}>
               <Text>{`Name:     ${v.name}`}</Text>
-              <Text>{`${v.location}`}</Text>
+              <Text>{`Location: ${v.location}`}</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
